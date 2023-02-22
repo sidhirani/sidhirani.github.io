@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/images/1.png">
+    <title>Portfolio</title>
+    <!-- icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- i -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <style>
+        .img {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.618), #96bb7c74), url(assets/images/hero.webp);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100vh;
+            width: 100%;
+        }
+
+        /* .about-button {
+            display: block;
+            text-align: center;
+        }
+
+        .about-button .btn {
+            margin-left: 25px;
+            margin-right: 25px; */
+        /* margin-top: 100px; */
+
+        .clip {
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+            height: 18px;
+            width: 18px;
+            background-color: #96bb7c;
+            z-index: -11;
+        }
+
+        .skill {
+            border: none;
+            background-color: #96bb7c;
+            font-size: 10px;
+            color: white;
+            padding: 2px;
+            border-radius: 5px;
+            left: 73%;
+        }
+
+        .progress {
+            height: 5px;
+        }
+
+        .progress-bar {
+            background-color: #96bb7c;
+        }
+
+        .btn {
+            height: 50px;
+            width: 150px;
+            border: 1px solid #96bb71;
+            border-radius: 20px;
+            background-color: #96bb71;
+
+        }
+
+        .btn1:hover {
+            background-color: #4f8816;
+
+        }
+
+        .btn:hover {
+            background-color: #4f8816;
+        }
+
+
+        .btn1 {
+            height: 50px;
+            width: 200px;
+            border: 1px solid #96bb71;
+            border-radius: 20px;
+            background-color: #96bb71;
+
+        }
+
+        .gallery_section {
+            text-align: center !important;
+        }
+
+
+        .life-history {
+            background-color: #f8f9fa;
+            position: relative;
+        }
+        .life-history h2 {
+            color: black;
+            font-weight: 500;
+            position: relative;
+            z-index: 10;
+            font-size: 2rem;
+        }
+
+        .life-history .life-single {
+            z-index: 10;
+            position: relative;
+            border-bottom: 1px solid #96bb71;
+        }
+
+        .life-history .life-single p {
+            font-weight: 400;
+            font-size: 1rem;
+            color: black;
+            text-align: justify;
+        }
+
+        .life-history .life-single p span {
+            border: 1px solid #96bb7c;
+            border-radius: 5px;
+            color: rgb(17, 16, 16);
+            padding: 5px;
+            font-size: 20px;
+        }
+
+        .life-history .life-single h4 {
+            color: rgb(12, 1, 1);
+            font-weight: 400;
+            font-size: 1.5rem;
+        }
+
+        .foot {
+            background-color: #f8f9fa;
+            padding: 40px 0px 40px 0px;
+            color: black;
+            text-align: center;
+            font-size: 20px;
+            letter-spacing: 3px;
+
+        }
+
+        cite>a {
+            color: blue;
+        }
+        cite>a:hover {
+            color: green;
+        }
+
+        .form-control {
+            border: none;
+            border-bottom: 1px solid black;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-bottom: 1px solid #96bb71;
+            box-shadow: none;
+        }
+        a,
+        li {
+            text-decoration: none;
+            list-style: none;
+            color: #96bb7c;
+        }
+        h1,
+        h2,
+        h3 { font-family: cursive;
+        }
+        .nav-link {
+            color: black;
+        }
+        #btn1 {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 3%;
+            z-index: 99;
+            font-size: 15px;
+            border: none;
+            border-radius: 50%;
+            background-color: #96bb71;
+            color: white;
+            cursor: pointer;
+            padding: 10px;
+            height: 50px;
+            width: 50px;
+        }
+
+        #btn1 i {
+            font-size: 15px;
+        }
+        .nav>ul {
+            display: flex;
+            justify-content: center !important;
+        }
+        .scroll_nav {
+            display: flex;
+            justify-content: space-between;
+            background-color: white;
+        }
+        .scroll_nav>ul {
+            display: flex;
+        }
+        .nav {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .nav>ul>li,
+        .scroll_nav>ul>li {
+            padding: 16px;
+            list-style: none;
+        }
+
+        .cls {
+            text-decoration: none;
+            text-transform: capitalize;
+            color: white;
+        }
+
+        .scroll_nav {
+            position: fixed;
+            width: 100%;
+            top: -30%;
+            z-index: 50;
+        }
+        .top {
+            animation: ani 0.2s linear forwards;
+        }
+        @keyframes ani {
+            0% {
+                transform: translateY(-100px);
+            }
+            100% {
+                transform: translateY(0px);
+
+            }
+        }
+
+        @media screen and (max-width: 756px) {
+            #btn1 {
+                display: none;
+            }
+
+            .nav1 {
+                display: none;
+            }
+
+            .scroll_nav {
+                display: none;
+            }
+
+            .s {
+                display: none;
+            }
+
+        }
+
+        .py-1:hover {
+            background-color: #96bb71;
+
+        }
+        .top1 {
+            padding-top: 10px;
+        }
+        hr {
+            color: white;
+        }
+
+        .top1>li {
+            padding: 10px;
+            color: white;
+            display: inline;
+            font-size: 13px;
+        }
+
+        .s {
+            border-bottom: 1px solid white;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="topfunction()" id="btn1"><i class="fas fa-arrow-up px-1"></i></button>
+    <div class="img">
+        <!-- <nav class="navbar navbar-expand-lg navbar-dark d-sm-none d-lg-flex d-md-none">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">about</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">service</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </div>
+
+        </nav> -->
+        <div class="s">
+            <ul class="top1">
+                <li><i class="fas fa-envelope"></i> sidhirani1997@gmail.com</li>
+                <li><i class="fa-solid fa-phone"></i> +91-85077****</li>
+            </ul>
+        </div>
+        <!-- <hr> -->
+
+        <div class="scroll_nav ">
+            <a href="" class="sty mx-5"><img src="/assets/images/logo.png" id="logo" height="50px" width="50px"
+                    alt=""></a>
+            <ul>
+                <li><a href="" style="color: black;">Home</a></li>
+                <li><a href="" style="color: black;">About</a></li>
+                <li><a href="" style="color: black;">Service</a></li>
+                <li><a href="" style="color: black;">Project</a></li>
+            </ul>
+        </div>
+        <div class="nav1">
+
+            <div class="bg">
+                <div class="nav">
+                    <a href="" class="sty mx-5"><img src="/assets/images/logo.png" height="50px" width="50px"
+                            alt=""></a>
+                    <ul>
+                        <li><a href="" class="cls">Home</a></li>
+                        <li><a href="" class="cls">About</a></li>
+                        <li><a href="" class="cls">Service</a></li>
+                        <li><a href="" class="cls">Project</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- offcanvas sm scren -->
+
+
+        <i class="fa-solid fa-bars   fs-1 text-light p-4 d-sm-block  d-md-none d-lg-none " data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasExample" aria-controls="offcanvasExample"></i>
+        <!-- <button class="btn btn-primary d-sm-flex d-lg-none d-md-flex" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+            Button with data-bs-target
+          </button> -->
+        <div class="offcanvas offcanvas-end d-sm-flex d-lg-none d-md-flex" tabindex="-1" id="offcanvasExample"
+            aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasExampleLabel" style="border-bottom: 1px solid #96bb71;">My
+                    Portfolio</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <img src="/sidhitemp2/images/hero.webp" height="200px" width="200px"
+                    style="border-radius: 12px 0px 12px 0px;" alt="">
+                <div class="dropdown mt-3">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                        About
+                    </button>
+                    <ol>
+                        <li><i class="fa-solid fa-location-dot"></i> dwarka mor</li>
+                    </ol>
+
+                </div>
+            </div>
+        </div>
+        <!-- offcanvas end  -->
+        <div class="container">
+            <div class="row align-items-center" style="height: 90vh;">
+                <div class="col-12 ">
+                    <div class="content">
+                        <h1 class="text-light text-center">I am Sidhi</h1>
+                        <h1 class="text-light text-center m">And i m a Web DESIGNER </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- portfolio skills start -->
+    <div class="container mt-5 py-5">
+        <div class="row">
+            <div class=" col-12 col-lg-6">
+                <img src="/assets/images/img1.webp" height="auto" width="100%" alt="">
+            </div>
+            <div class=" col-12 col-lg-6 mt-4">
+                <h1>My Portfolio</h1>
+                <h2 class="mb-4">Welcome To My Portfolio</h2>
+                <p>My name is Sidhi Rani, and my portfolio is representation of all that I've learned and
+                    accomplished as a web designer student. I love designing website and am looking for
+                    more
+                    opportunities to work in coding on a freelance basis so I can sharp up my skills more.
+                </p>
+
+                <div class="skills">
+                    <h4 class="my-4">
+                        <span>Skills</span>
+                    </h4>
+                    <div class="single-skill mb-1">
+                        <span class="mb-3">HTML</span>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 75%;"></div>
+                        </div>
+                        <button type="button" class=" mt-2 skill position-relative">
+                            90% <span class="position-absolute top-0 start-50 translate-middle badge  clip "> <span
+                                    class="visually-hidden">unread messages</span></span>
+                        </button>
+                    </div>
+                    <div class="single-skill mb-1">
+                        <span class="mb-3">CSS</span>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 85%;"></div>
+                        </div>
+                        <button type="button" class=" mt-2 skill position-relative">
+                            85% <span class="position-absolute top-0 start-50 translate-middle badge  clip "> <span
+                                    class="visually-hidden">unread messages</span></span>
+                        </button>
+                    </div>
+                    <div class="single-skill mb-1">
+                        <span class="mb-3">BOOTSTRAP</span>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 85%;"></div>
+                        </div>
+                        <button type="button" class="mt-2 skill position-relative">
+                            85% <span class="position-absolute top-0 start-50 translate-middle badge  clip "> <span
+                                    class="visually-hidden">unread messages</span></span>
+                        </button>
+                    </div>
+                    <div class="single-skill mb-1">
+                        <span class="mb-3">PHOTOSHOP</span>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 75%;"></div>
+                        </div>
+                        <button type="button" class="mt-2 skill position-relative">
+                            75% <span class="position-absolute top-0 start-50 translate-middle badge  clip "> <span
+                                    class="visually-hidden">unread messages</span></span>
+                        </button>
+
+                    </div>
+                    <div class="single-skill mb-1">
+                        <span class="mb-3">JAVASCRIPT</span>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 80%;"></div>
+                        </div>
+                        <button type="button" class="mt-2 skill position-relative">
+                            80% <span class="position-absolute top-0 start-50 translate-middle badge  clip "> <span
+                                    class="visually-hidden">unread messages</span></span>
+                        </button>
+                    </div>
+                    <div class="about-button">
+                        <button class="btn text-light">Contact Me</button>
+                        <a href="/assets/images/sidhi resume.zip">
+                            <button class="btn1 mt-2 text-light py-2"> Download
+                                Resume</button>
+
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    </div>
+    <!-- portfolio skills end -->
+
+    <!-- gallery start here -->
+
+    <div class="gallery_section">
+        <h2 class="text-center mt-5 ">My gallery</h2>
+        <ul class="nav nav-tabs  w-25 m-auto " style="border:none;">
+            <li class="nav-item">
+                <a class="nav-link " style="border:none; background:transparent;" data-bs-toggle="tab"
+                    data-bs-target="#abc" style="color: black !important;">ALL</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="border:none; background:transparent;" data-bs-toggle="tab"
+                    data-bs-target="#aaa">PHOTOGRAPHY</a>
+            </li>
+            <li class="nav-item">
+                <button class="nav-link " style="border:none; background: transparent;" data-bs-toggle="tab"
+                    data-bs-target="#bbb">MOCKUP</button>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane fade show active" id="abc">
+                <div class="container">
+                    <div class="row">
+                        <div class=" col-sm-12 col-md-4 col-lg-4 mt-3">
+                            <img src="/assets/images/work_5.jpg.webp" height="auto" class="w-100" alt="">
+                            <img src="/assets/images/work_3.jpg.webp" height="auto" alt="" class="w-100 mt-4">
+                        </div>
+                        <div class="col-sm-12 col-md-4 col-lg-4 mt-3">
+                            <img src="/assets/images/work_1.jpg.webp" height="auto" width="100%" alt="">
+
+                        </div>
+                        <div class="col-sm-12 col-md-4 col-lg-4 mt-3">
+                            <img src="/assets/images/work_2.jpg.webp" height="auto" width="100%" alt="">
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-4 col-lg-4 mt-3">
+                            <img src="/assets/images/work_4.jpg.webp" height="auto" width="100%" alt="">
+                        </div>
+                        <div class="col-sm-12 col-md-4 col-lg-4 mt-4">
+                            <img src="/assets/images/work_6.jpg.webp" height="auto" width="100%" alt="">
+                        </div>
+                        <div class="col-sm-12 col-md-4 col-lg-4 mt-4">
+                            <img src="/assets/images/work_7.jpg.webp" height="auto" width="100%" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade  " id="aaa">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-4 col-lg-4 mt-3">
+                            <img src="/assets/images/work_4.jpg.webp" height="auto" width="100%" alt="">
+                        </div>
+                        <div class="col-sm-12 col-md-4 col-lg-4 mt-3">
+                            <img src="/assets/images/work_6.jpg.webp" height="auto" width="100%" alt="">
+                        </div>
+                        <div class="col-sm-12 col-md-4 col-lg-4 mt-3">
+                            <img src="/assets/images/work_2.jpg.webp" height="auto" width="100%" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade  " id="bbb">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-4 col-lg-4">
+                            <img src="/assets/images/work_3.jpg.webp" height="auto" width="100%" alt="">
+                        </div>
+                        <div class="col-sm-12 col-md-4 col-lg-4">
+                            <img src="/assets/images/work_6.jpg.webp" height="auto" width="100%" alt="">
+                        </div>
+                        <div class="col-sm-12 col-md-4 col-lg-4">
+                            <img src="/assets/images/work_1.jpg.webp" height="auto" width="100%" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    <!-- gallery end -->
+
+    <!-- service start -->
+    <div class="services">
+        <h2 class="text-center mt-5 p-5 mb-3">Services</h2>
+        <div class="container mb-5">
+            <div class="row">
+                <div class="col-12 col-md-12 col-sm-12 col-lg-4 mt-3">
+                    <div class="border border-success p-3">
+                        <h3 class="text-center p-2">Design</h3>
+
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores sunt quae nam eaque
+                            repellat
+                            dicta suscipit, voluptas voluptates asperiores id.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-12 col-sm-12 col-lg-4 mt-3">
+                    <div class="border border-success p-3">
+                        <h3 class="text-center p-2">Responsive</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores sunt quae nam eaque
+                            repellat
+                            dicta suscipit, voluptas voluptates asperiores id.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-12 col-sm-12 col-lg-4 mt-3 mb-5">
+                    <div class="border border-success  p-3">
+                        <h3 class="text-center p-2">Photoshop</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores sunt quae nam eaque
+                            repellat
+                            dicta suscipit, voluptas voluptates asperiores id.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <!-- service end -->
+
+
+    <!-- resume start -->
+    <div class="section life-history py-5" id="life">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-12">
+                    <h2 class="mb-5">Experience</h2>
+                    <div class="life-single my-4">
+                        <p>
+                            <span class="py-1 px-4">Now</span>
+                        </p>
+                        <h4 class="py-2">Fresher</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque odit itaque,
+                            distinctio sunt
+                            repudiandae cum excepturi eos ipsam necessitatibus voluptatibus delectus, quasi id
+                            tenetur
+                            accusantium ea vitae nobis molestias esse.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-12">
+                    <h2 class="mb-5">Education</h2>
+                    <div class="life-single my-4">
+                        <p>
+                            <span class="py-1 px-4">2013</span>
+                        </p>
+                        <h4 class="py-2">Passed My 10th</h4>
+                        <p> I have passed my 10th standerd from B.S.E.B Lorem ipsum dolor sit amet consectetur,
+                            adipisicing elit. Eaque odit itaque,
+                            distinctio sunt
+                            repudiandae cum excepturi eos ipsam necessitatibus voluptatibus delectus, quasi id
+                            tenetur
+                            accusantium ea vitae nobis molestias esse.</p>
+                    </div>
+                    <div class="life-single my-4">
+                        <p>
+                            <span class="py-1 px-4">2015</span>
+                        </p>
+                        <h4 class="py-2">Passed My 12th</h4>
+                        <p>I have passed my 12th standerd from B.S.E.B with (science) subject Lorem ipsum dolor
+                            sit amet consectetur, adipisicing elit. Eaque odit itaque,
+                            distinctio sunt
+                            repudiandae cum excepturi eos ipsam necessitatibus voluptatibus delectus, quasi id
+                            tenetur
+                            accusantium ea vitae nobis molestias esse.</p>
+                    </div>
+                    <div class="life-single my-4">
+                        <p>
+                            <span class="py-1 px-4">2021</span>
+                        </p>
+                        <h4 class="py-2">completed M.sc </h4>
+                        <p>Currently I'm doing WEB designing course. Lorem ipsum dolor sit amet consectetur,
+                            adipisicing elit. Eaque odit itaque,
+                            distinctio sunt
+                            repudiandae cum excepturi eos ipsam necessitatibus voluptatibus delectus, quasi id
+                            tenetur
+                            accusantium ea vitae nobis molestias esse.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- resume end here -->
+
+    <!-- contact start here -->
+
+
+    <div class="contact">
+        <h1 class="text-center mt-5 mb-5">Contact me</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6 col-sm-12 col-lg-7">
+                    <form class="contact-form" action="">
+                        <div class="row">
+                            <div class="col-12 col-md-6 col-lg-6 mb-5">
+                                <div class="form-group">
+                                    <label for="fname">first name</label>
+                                    <input type="text" id="fname" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-6">
+                                <div class="form-group">
+                                    <label for="lname">last name</label>
+                                    <input type="text" id="lname" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Emails</label>
+                                <input type="emails" class="form-control" id="email">
+                            </div>
+                        </div>
+                        <div class="form-group mt-5">
+                            <label for="message">Message</label>
+                            <textarea class="form-control" name="" id="message" cols="30" rows="5"></textarea>
+
+                        </div>
+                        <button type="submit" class="btn text-light mt-4 mb-5">Send message</button>
+                    </form>
+                </div>
+                <div class=" col-12 col-sm-12 col-md-6 col-lg-5">
+                    <h3>Contact info</h3>
+                    <ul>
+                        <li class="mt-3 mb-3 p-1"><a href=""><i class="fa-solid fa-location-dot"></i><span
+                                    class="p-2">Dwarka mor</span></a></li>
+
+                        <li class="mt-3 mb-3 p-1"><a href=""><i class="fa-solid fa-phone"></i><span
+                                    class="p-2">+91-85077-*****</span></a></li>
+
+                        <li class="mt-3 mb-3 p-1"><a href=""><i class="fa-solid fa-envelope"></i><span
+                                    class="p-2">sidhirani1997@gmail.com</span></a></li>
+
+                        <li class="mt-3 mb-3 p-1"><a href=""><i class="fa-solid fa-location-dot"></i><span
+                                    class="p-2">Dwarka mor</span></a></li>
+                    </ul>
+
+                </div>
+
+            </div>
+            <!-- footer -->
+            <footer class="foot">
+                <cite>Thanks for visiting my<a href=""> Profile</a></cite>
+            </footer>
+
+
+
+            <script>
+                var button = document.getElementById("btn1");
+
+                // window.onscroll = function () { scrollfun() };
+
+                function scrollfun() {
+                    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) { button.style.display = "block"; }
+                    else { button.style.display = "none"; }
+                }
+                function topfunction() {
+                    document.body.scrollTop = 0;
+                    document.documentElement.scrollTop = 0;
+                }
+
+
+
+                let scroll_nav = document.querySelector(".scroll_nav");
+                window.onscroll = function () {
+                    let Y = pageYOffset;
+                    console.log(Y)
+                    if (Y < 100) {
+                        // to back top
+                        scroll_nav.style.top = "-50%"
+                        scroll_nav.style.transition = " 0.5s"
+
+                    } else {
+                        // back
+                        scroll_nav.style.top = "0%"
+                    }
+
+                    if (Y > 200) {
+                        button.style.display = "block"
+                    } else {
+                        button.style.display = "none"
+
+                    }
+                }
+            </script>
+
+
+
+
+
+
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+                crossorigin="anonymous"></script>
+</body>
+
+</html>
